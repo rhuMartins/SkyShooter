@@ -5,7 +5,7 @@ import pygame.image
 from pygame import Surface, Rect
 from pygame.font import Font
 
-from code.Const import WINDOW_WIDTH, COLOR_BLUE, MENU_OPTION, COLOR_WHITE
+from code.Const import WINDOW_WIDTH, COLOR_BLUE, MENU_OPTION, COLOR_BLACK
 
 
 class Menu:
@@ -23,7 +23,7 @@ class Menu:
             self.menu_text(50, "Shooter", COLOR_BLUE, ((WINDOW_WIDTH / 2), 95))
 
             for i in range(len(MENU_OPTION)):
-                self.menu_text(20, MENU_OPTION[i], COLOR_WHITE, ((WINDOW_WIDTH / 2), 200 + 22 * i))
+                self.menu_text(20, MENU_OPTION[i], COLOR_BLACK, ((WINDOW_WIDTH / 2), 200 + 22 * i))
 
             pygame.display.flip()
 
