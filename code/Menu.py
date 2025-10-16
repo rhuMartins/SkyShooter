@@ -5,7 +5,7 @@ import pygame.image
 from pygame import Surface, Rect
 from pygame.font import Font
 
-from code.Const import WINDOW_WIDTH, MENU_OPTION, COLOR_ORANGE, COLOR_WHITE, COLOR_YELLOW, COLOR_BLACK
+from code.Const import WINDOW_WIDTH, MENU_OPTION, C_ORANGE, C_WHITE, C_YELLOW, C_BLACK
 
 
 class Menu:
@@ -27,14 +27,14 @@ class Menu:
             overlay.fill((0, 0, 0))
             self.window.blit(overlay, (0, 0))
 
-            self.menu_text(50, "Sky", COLOR_ORANGE, ((WINDOW_WIDTH / 2), 65))
-            self.menu_text(50, "Shooter", COLOR_ORANGE, ((WINDOW_WIDTH / 2), 95))
+            self.menu_text(50, "Sky", C_ORANGE, ((WINDOW_WIDTH / 2), 65))
+            self.menu_text(50, "Shooter", C_ORANGE, ((WINDOW_WIDTH / 2), 95))
 
             for i in range(len(MENU_OPTION)):
                 if i == menu_option:
-                    self.menu_text(20, MENU_OPTION[i], COLOR_YELLOW, ((WINDOW_WIDTH / 2), 200 + 22 * i))
+                    self.menu_text(20, MENU_OPTION[i], C_YELLOW, ((WINDOW_WIDTH / 2), 200 + 22 * i))
                 else:
-                    self.menu_text(20, MENU_OPTION[i], COLOR_WHITE, ((WINDOW_WIDTH / 2), 200 + 22 * i))
+                    self.menu_text(20, MENU_OPTION[i], C_WHITE, ((WINDOW_WIDTH / 2), 200 + 22 * i))
             pygame.display.flip()
 
             # Check for all events
@@ -65,7 +65,7 @@ class Menu:
     def menu_text(self, text_size: int, text: str, text_color: tuple, text_center_pos: tuple):
         text_font: Font = pygame.font.SysFont(name="Upheaval TT (BRK)", size=text_size)
 
-        outline_color = COLOR_BLACK
+        outline_color = C_BLACK
         offsets = [(-1, 0), (1, 0), (0, -1), (0, 1)]
 
         for dx, dy in offsets:
