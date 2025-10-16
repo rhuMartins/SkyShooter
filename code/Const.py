@@ -16,6 +16,11 @@ ENTITY_DAMAGE = {'Level1BG0': 0,
                  'Level1BG3': 0,
                  'Level1BG4': 0,
                  'Level1BG5': 0,
+                 'Level2BG0': 0,
+                 'Level2BG1': 0,
+                 'Level2BG2': 0,
+                 'Level2BG3': 0,
+                 'Level2BG4': 0,
                  'Player1': 1,
                  'Player1Shot': 25,
                  'Player2': 1,
@@ -33,6 +38,11 @@ ENTITY_HEALTH = {'Level1BG0': 999,
                  'Level1BG3': 999,
                  'Level1BG4': 999,
                  'Level1BG5': 999,
+                 'Level2BG0': 999,
+                 'Level2BG1': 999,
+                 'Level2BG2': 999,
+                 'Level2BG3': 999,
+                 'Level2BG4': 999,
                  'Player1': 300,
                  'Player1Shot': 1,
                  'Player2': 300,
@@ -43,19 +53,24 @@ ENTITY_HEALTH = {'Level1BG0': 999,
                  'Enemy2Shot': 1,}
 
 ENTITY_SCORE = {'Level1BG0': 0,
-                 'Level1BG1': 0,
-                 'Level1BG2': 0,
-                 'Level1BG3': 0,
-                 'Level1BG4': 0,
-                 'Level1BG5': 0,
-                 'Player1': 0,
-                 'Player1Shot': 0,
-                 'Player2': 0,
-                 'Player2Shot': 0,
-                 'Enemy1': 100,
-                 'Enemy1Shot': 0,
-                 'Enemy2': 125,
-                 'Enemy2Shot': 0,}
+                'Level1BG1': 0,
+                'Level1BG2': 0,
+                'Level1BG3': 0,
+                'Level1BG4': 0,
+                'Level1BG5': 0,
+                'Level2BG0': 0,
+                'Level2BG1': 0,
+                'Level2BG2': 0,
+                'Level2BG3': 0,
+                'Level2BG4': 0,
+                'Player1': 0,
+                'Player1Shot': 0,
+                'Player2': 0,
+                'Player2Shot': 0,
+                'Enemy1': 100,
+                'Enemy1Shot': 0,
+                'Enemy2': 125,
+                'Enemy2Shot': 0,}
 
 ENTITY_SHOT_DELAY = {'Player1': 40,
                      'Player2': 20,
@@ -68,6 +83,11 @@ ENTITY_SPEED = {'Level1BG0': 0,
                 'Level1BG3': 4,
                 'Level1BG4': 2,
                 'Level1BG5': 3,
+                'Level2BG0': 0,
+                'Level2BG1': 2,
+                'Level2BG2': 3,
+                'Level2BG3': 4,
+                'Level2BG4': 2,
                 'Player1': 3,
                 'Player1Shot': 7,
                 'Player2': 3,
@@ -78,6 +98,7 @@ ENTITY_SPEED = {'Level1BG0': 0,
                 'Enemy2Shot': 2,}
 
 EVENT_ENEMY = pygame.USEREVENT + 1
+EVENT_TIMEOUT = pygame.USEREVENT + 2
 
 # M
 MENU_OPTION = ('NEW GAME 1 PLAYER',
@@ -99,7 +120,12 @@ PLAYER_KEY_SHOOT = {'Player1': pygame.K_LCTRL,
                     'Player2': pygame.K_RCTRL}
 
 # S
-SPAWN_TIME = 3000
+SPAWN_TIME = 2500
+
+# T
+TIMEOUT_LEVEL = 30000
+TIMEOUT_STEP = 100
+
 # W
 WINDOW_WIDTH = 576
 WINDOW_HEIGHT = 324
